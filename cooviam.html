@@ -136,13 +136,13 @@
             console.log("Nombre:", userName, "Email:", userEmail);  // Imprime en la consola para verificar
             
             // Enviar datos a Google Forms
-            fetch("https://docs.google.com/forms/d/e/1FAIpQLSfd9XBtp7cl2dlZSKwvnkhK5LAp2w9xKda9zYL5AufmijsbKg/viewform?usp=sf_link", {
+            fetch("https://docs.google.com/forms/u/0/d/e/1FAIpQLSfd9XBtp7cl2dlZSKwvnkhK5LAp2w9xKda9zYL5AufmijsbKg/formResponse", {
                 method: "POST",
                 mode: "no-cors",
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded"
                 },
-                body: `entry.1635612302=${encodeURIComponent(userName)}&entry.1843172613=${encodeURIComponent(userEmail)}`
+                body: `entry.1669660801=${encodeURIComponent(userName)}&entry.26378021=${encodeURIComponent(userEmail)}`
             }).then(response => {
                 console.log("Formulario enviado correctamente.");
             }).catch(error => {
