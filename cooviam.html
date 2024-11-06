@@ -123,20 +123,16 @@
             // Captura los datos ingresados
             const userName = document.getElementById("userName").value;
             const userEmail = document.getElementById("userEmail").value;
-            console.log("Nombre:", userName, "Email:", userEmail);  // Imprime en la consola para verificar
             
             // Enviar datos a Google Forms
             fetch("https://docs.google.com/forms/u/0/d/e/1FAIpQLSfd9XBtp7cl2dlZSKwvnkhK5LAp2w9xKda9zYL5AufmijsbKg/formResponse", {
                 method: "POST",
-                mode: "no-cors",
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded"
-                },
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: `entry.1669660801=${encodeURIComponent(userName)}&entry.26378021=${encodeURIComponent(userEmail)}`
             }).then(response => {
-                console.log("Formulario enviado correctamente.");
+                console.log("Datos enviados correctamente.");
             }).catch(error => {
-                console.error("Error al enviar el formulario:", error);
+                console.error("Error al enviar datos:", error);
             });
         });
     </script>
